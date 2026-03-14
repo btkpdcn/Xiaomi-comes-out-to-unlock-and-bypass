@@ -1,2 +1,8 @@
-# Xiaomi-comes-out-to-unlock-and-bypass
-3
+小米出厂澎湃os绑定
+目前签名校验的问题已经解决。l
+服务器端也骗过了
+可直接绑定
+届时完成公测后
+将会在一周后发布，敬请期待
+主要原理就是靠小米服务框架，过多的细节我不去讲,反正你们就知道研究这个很坎坷,足足浪费了我一天一夜,写了11个副本,测试了11个副本。最后终于得到了。此脚本。
+<img width="651" height="122" alt="IMG_20260314_182436" src="https://github.com/user-attachments/assets/668448e9-886d-4fc5-86ce-be1e36e11bb4" />
