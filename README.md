@@ -69,42 +69,48 @@ function getUnlockApiRoute(versionCode) {
 }
 
 You can see clearly:
-- <span style="color:#ff3838;">v816 / v14</span> route to blocked or restricted MIUI endpoints
-- <span style="color:#3498db;">V295</span> routes directly to the native HyperOS unlock API
-
+<ul>
+  <li><span style="color:#ff3838;">v816 / v14</span> route to blocked or restricted MIUI endpoints</li>
+  <li><span style="color:#3498db;">V295</span> routes directly to the native HyperOS unlock API</li>
+</ul>
 This is not theory. It is Xiaomi’s own official code, pulled straight from their unlock page.
 
 ---
 
-## 🚀 <span style="color:#20c997;">Why This Works: It Switches You To HyperOS Policy</span>
+<h2 style="color:#20c997;">🚀 Why This Works: It Switches You To HyperOS Policy</h2>
 When you change the version tag to <span style="color:#3498db;">V295</span>:
-1. The unlock request carries the V295 identifier
-2. The server recognizes it as a legitimate HyperOS version
-3. You are automatically routed to the `hyperos_new_unlock_official` policy
-4. You bypass all MIUI-era restrictions entirely
-
+<ol>
+  <li>The unlock request carries the V295 identifier</li>
+  <li>The server recognizes it as a legitimate HyperOS version</li>
+  <li>You are automatically routed to the `hyperos_new_unlock_official` policy</li>
+  <li>You bypass all MIUI-era restrictions entirely</li>
+</ol>
 This is the core magic: you are no longer on the MIUI blacklisted path. You are on the new, unblocked HyperOS path, which does not carry the same 3-day binding or seal control rules.
 
 ---
 
-## 🛠 <span style="color:#9b59b6;">How To Apply (Mlgm Repository)</span>
+<h2 style="color:#9b59b6;">🛠 How To Apply (Mlgm Repository)</h2>
 Inside the mlgm unlock tool source:
-1. Find the hardcoded version value: `<span style="color:#ff3838;">"v14"</span>`
-2. Replace it directly with `<span style="color:#3498db;">"V295"</span>`
-3. No other changes needed. This single line patch is all it takes.
+<ol>
+  <li>Find the hardcoded version value: `<span style="color:#ff3838;">"v14"</span>`</li>
+  <li>Replace it directly with `<span style="color:#3498db;">"V295"</span>`</li>
+  <li>No other changes needed. This single line patch is all it takes.</li>
+</ol>
 
 ---
 
-## ✅ <span style="color:#f9ca24;">Final Conclusion</span>
-- <span style="color:#ff3838;">v816 is permanently blacklisted and will never work again</span>
-- <span style="color:#3498db;">V295 is a real HyperOS identifier extracted from official JS</span>
-- Changing the version tag routes you to <span style="color:#20c997;">HyperOS unlock policy, not MIUI</span>
-- This one-line patch bypasses all seal control and 3-day binding limits
-- Fully verified on Redmi Turbo 4 and works 100% stably
+<h2 style="color:#f9ca24;">✅ Final Conclusion</h2>
+<ul>
+  <li><span style="color:#ff3838;">v816 is permanently blacklisted and will never work again</span></li>
+  <li><span style="color:#3498db;">V295 is a real HyperOS identifier extracted from official JS</span></li>
+  <li>Changing the version tag routes you to <span style="color:#20c997;">HyperOS unlock policy, not MIUI</span></li>
+  <li>This one-line patch bypasses all seal control and 3-day binding limits</li>
+  <li>Fully verified on Redmi Turbo 4 and works 100% stably</li>
+</ul>
 
 ---
 
-## 💡 <span style="color:#1E90FF;">Final Note For The Community</span>
+<h2 style="color:#1E90FF;">💡 Final Note For The Community</h2>
 This method is not theoretical — it’s proven with real API captures and device tests. If you’re using the mlgm unlock tool, this is the only reliable, current way to bypass Xiaomi’s restrictions.
 
 Share your results with the community to help refine this method further.
