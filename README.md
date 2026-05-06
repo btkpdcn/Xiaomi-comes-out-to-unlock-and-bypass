@@ -24,7 +24,6 @@ This is **not random guesswork**. Every conclusion comes from:
 - Days of firmware unpacking and JS deobfuscation
 - Official unlock page source reverse engineering
 - Network traffic capture and API route analysis
-- Repeated real-device testing on Redmi Turbo 4
 
 After full verification, I can confirm:
 The legacy version tag **v816 is permanently blacklisted by Xiaomi backend**, while **V295 is a native HyperOS version ID extracted directly from official JS code**.
