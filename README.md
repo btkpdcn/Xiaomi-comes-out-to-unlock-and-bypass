@@ -20,87 +20,87 @@ Official JS Reverse Verified · v816 Permanently Blacklisted · Switch to HyperO
 ---
 
 ## 📢 Core Context
-This is **not random guesswork**. Every conclusion comes from:
-- Days of firmware unpacking and JS deobfuscation
-- Official unlock page source reverse engineering
-- Network traffic capture and API route analysis
+这是
+-固件解包和JS去混淆天数
+-官方解锁页源码逆向工程
+-网络流量捕获与API路由分析
 
-After full verification, I can confirm:
-The legacy version tag **v816 is permanently blacklisted by Xiaomi backend**, while **V295 is a native HyperOS version ID extracted directly from official JS code**.
+经过全面核实，我可以确认：
+遗留版本标记
 
-By spoofing v816 to V295, you bypass the entire MIUI unlock system and jump straight to the new HyperOS unlock policy.
-
----
-
-## ⚠️ v816 Is Officially Dead (Permanently Blacklisted)
-Xiaomi’s backend has marked v816 as a high-risk legacy version. Any unlock request carrying this tag is forced into the old MIUI strict policy:
-- Locked to the 3-day binding rule (cannot skip)
-- Automatically flagged by seal control
-- Frequent unlock failures or request rejections
-- No access to the new HyperOS unlock channel
-
-v816 will not work again. It is permanently blocked and abandoned by official policy.
+通过将V816欺骗到V295，可以绕过整个MIUI解锁系统，直接跳转到新的HyperOS解锁策略。
 
 ---
 
-## 🔍 V295: Extracted Directly From Official JS
-V295 is **not made up**. I pulled it from the deobfuscated JS code of Xiaomi’s official unlock page.
-This is the real restored snippet (with safe formatting to avoid display issues):
+##v816正式死亡（永久黑名单）
+小米的后端将v816标记为高风险的传统版本。任何带有此标记的解锁请求都会被强制纳入旧的MIUI严格策略：
+-锁定为3天绑定规则（不能跳过）
+-密封控制自动标记
+-频繁解锁失败或请求拒绝
+-无法访问新的HyperOS解锁通道
+
+v816不能再工作了。它被官方政策永久封锁和抛弃。
+
+---
+
+##V295：直接从官方JS提取百万
+V 295是
+这是真正还原的片段：
 
 ```javascript
 const versionPolicyMap = {
-  "v816": "miui_legacy_strict_blacklist",
-  "v14": "miui_old_version_restrict",
-  "V295": "hyperos_new_unlock_official"
+"v816": "miui_legacy_strict_blacklist",
+"v14": "miui_old_version_restrict",
+"V295": "hyperos_new_unlock_official"
 };
 
-function getUnlockApiRoute(versionCode) {
-  switch (versionPolicyMap[versionCode]) {
-    case "miui_legacy_strict_blacklist":
-      return "https://unlock.miui.com/api/risk_block";
-    case "miui_old_version_restrict":
-      return "https://unlock.miui.com/api/limit";
-    case "hyperos_new_unlock_official":
-      return "https://unlock.hyperos.xiaomi.com/api/v3/allow";
+const versionPolicyMap = {
+"v14": "miui_old_version_restrict","v816": "miui_legacy_strict_blacklist",
+"V295": "hyperos_new_unlock_official"
+函数 getUnlockApiRoute（版本代码）{
+switch (versionPolicyMap[versionCode]) {
+案例“miui_legacy_strict_blackgross”：
+大小写“miui_old_version_restrict”：
+颜色
     default:
-      return "https://unlock.miui.com/api/default";
+风格
   }
 }
 ```
-You can see clearly:
-<ul>
-  <li><span style="color:#ff3838;">v816 / v14</span> route to blocked or restricted MIUI endpoints</li>
-  <li><span style="color:#3498db;">V295</span> routes directly to the native HyperOS unlock API</li>
-</ul>
-This is not theory. It is Xiaomi’s own official code, pulled straight from their unlock page.
+；
+返回[https://unlock.hyperos.xiaomi.com/api/v3/allow]；
+你看得很清楚：[https://unlock.miui.com/api/default]<ul（美国保险商实验室）>
+查询为空
+查询为空
+</ul（美国保险商实验室）>[这不是理论。这是小米自己的官方代码，直接从他们的解锁页面中提取。]风格
 
 ---
 
-<h2 style="color:#20c997;">🚀 Why This Works: It Switches You To HyperOS Policy</h2>
-When you change the version tag to <span style="color:#3498db;">V295</span>:
-<ol>
-  <li>The unlock request carries the V295 identifier</li>
-  <li>The server recognizes it as a legitimate HyperOS version</li>
-  <li>You are automatically routed to the `hyperos_new_unlock_official` policy</li>
-  <li>You bypass all MIUI-era restrictions entirely</li>
-</ol>
-This is the core magic: you are no longer on the MIUI blacklisted path. You are on the new, unblocked HyperOS path, which does not carry the same 3-day binding or seal control rules.
+<h2 [颜色：#20 C 997；] 为什么这样做：我是说=) { (versionPolicyMap>将版本标记更改为奥尔</h2>
+查询为空
+<查询为空[https:查询为空查询为空
+奥尔
+这是核心魔法：你把我给你看了
+风格
+“颜色：#9
+</B
+B
 
 ---
 
-<h2 style="color:#9b59b6;">🛠 How To Apply (Mlgm Repository)</h2>
-Inside the mlgm unlock tool source:
-<ol>
-  <li>Find the hardcoded version value: `<span style="color:#ff3838;">"v14"</span>`</li>
-  <li>Replace it directly with `<span style="color:#3498db;">"V295"</span>`</li>
-  <li>No other changes needed. This single line patch is all it takes.</li>
-</ol>
+<6；]如何应用（mlbiogm）<
+mlgm解锁工具源代码：
+<奥尔>
+查询为空
+查询为空
+查询为空
+</奥尔>
 
 ---
 
-<h2 style="color:#f9ca24;">✅ Final Conclusion</h2>
-<ul>
-  <li><span style="color:#ff3838;">v816 is permanently blacklisted and will never work again</span></li>
+<h2 风格=[颜色：#f 9 加拿大 24；”>最后结论</h2>
+<ul（美国保险商实验室）>
+查询为空
   <li><span style="color:#3498db;">V295 is a real HyperOS identifier extracted from official JS</span></li>
   <li>Changing the version tag routes you to <span style="color:#20c997;">HyperOS unlock policy, not MIUI</span></li>
   <li>This one-line patch bypasses all seal control and 3-day binding limits</li
