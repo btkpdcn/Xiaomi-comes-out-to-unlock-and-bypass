@@ -67,7 +67,7 @@ function getUnlockApiRoute(versionCode) {
       return "https://unlock.miui.com/api/default";
   }
 }
-
+```
 You can see clearly:
 <ul>
   <li><span style="color:#ff3838;">v816 / v14</span> route to blocked or restricted MIUI endpoints</li>
