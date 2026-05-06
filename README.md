@@ -104,8 +104,7 @@ Inside the mlgm unlock tool source:
   <li><span style="color:#ff3838;">v816 is permanently blacklisted and will never work again</span></li>
   <li><span style="color:#3498db;">V295 is a real HyperOS identifier extracted from official JS</span></li>
   <li>Changing the version tag routes you to <span style="color:#20c997;">HyperOS unlock policy, not MIUI</span></li>
-  <li>This one-line patch bypasses all seal control and 3-day binding limits</li>
-  <li>Fully verified on Redmi Turbo 4 and works 100% stably</li>
+  <li>This one-line patch bypasses all seal control and 3-day binding limits</li
 </ul>
 
 ---
