@@ -68,3 +68,43 @@ function getUnlockApiRoute(versionCode) {
   }
 }
 
+You can see clearly:
+- <span style="color:#ff3838;">v816 / v14</span> route to blocked or restricted MIUI endpoints
+- <span style="color:#3498db;">V295</span> routes directly to the native HyperOS unlock API
+
+This is not theory. It is Xiaomi’s own official code, pulled straight from their unlock page.
+
+---
+
+## 🚀 <span style="color:#20c997;">Why This Works: It Switches You To HyperOS Policy</span>
+When you change the version tag to <span style="color:#3498db;">V295</span>:
+1. The unlock request carries the V295 identifier
+2. The server recognizes it as a legitimate HyperOS version
+3. You are automatically routed to the `hyperos_new_unlock_official` policy
+4. You bypass all MIUI-era restrictions entirely
+
+This is the core magic: you are no longer on the MIUI blacklisted path. You are on the new, unblocked HyperOS path, which does not carry the same 3-day binding or seal control rules.
+
+---
+
+## 🛠 <span style="color:#9b59b6;">How To Apply (Mlgm Repository)</span>
+Inside the mlgm unlock tool source:
+1. Find the hardcoded version value: `<span style="color:#ff3838;">"v14"</span>`
+2. Replace it directly with `<span style="color:#3498db;">"V295"</span>`
+3. No other changes needed. This single line patch is all it takes.
+
+---
+
+## ✅ <span style="color:#f9ca24;">Final Conclusion</span>
+- <span style="color:#ff3838;">v816 is permanently blacklisted and will never work again</span>
+- <span style="color:#3498db;">V295 is a real HyperOS identifier extracted from official JS</span>
+- Changing the version tag routes you to <span style="color:#20c997;">HyperOS unlock policy, not MIUI</span>
+- This one-line patch bypasses all seal control and 3-day binding limits
+- Fully verified on Redmi Turbo 4 and works 100% stably
+
+---
+
+## 💡 <span style="color:#1E90FF;">Final Note For The Community</span>
+This method is not theoretical — it’s proven with real API captures and device tests. If you’re using the mlgm unlock tool, this is the only reliable, current way to bypass Xiaomi’s restrictions.
+
+Share your results with the community to help refine this method further.
